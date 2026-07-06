@@ -5,11 +5,14 @@ GUI-LHADDAS is a Graphical User Interface (GUI) application for **LHADDAS**, a s
 This application allows you to seamlessly configure complex input parameters and execute calculations without relying on the command line. It also provides intuitive 3D map visualization and analysis of the simulation results (Atmospheric Concentration, Surface Deposition Concentration, Dose Rate, etc.).
 
 <p align="center">
-  <img src="./docs/images/AtmosphericDispersion.png" alt="3D visualization of atmospheric concentration" width="49%">
-  <img src="./docs/images/DoseRate.png" alt="2D visualization of ground-level dose rate" width="49%">
+  <img src="./docs/images/AtmosphericDispersion.png" alt="3D visualization of atmospheric concentration" width="80%">
+  <br>
+  <em>3D atmospheric concentration through the Oklahoma City street network.</em>
 </p>
 <p align="center">
-  <em>Left: 3D atmospheric concentration through the Oklahoma City street network. Right: ground-level dose-rate distribution, showing shielding effects behind buildings.</em>
+  <img src="./docs/images/DoseRate.png" alt="2D visualization of ground-level dose rate" width="80%">
+  <br>
+  <em>Ground-level dose-rate distribution, showing shielding effects behind buildings.</em>
 </p>
 
 ## Main Features
