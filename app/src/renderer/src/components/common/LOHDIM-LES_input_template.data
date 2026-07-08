@@ -1,0 +1,25 @@
+'building.txt' !building data
+'terrain.txt' !elevation data
+'zgrid.txt' !vertical grid
+'release.txt' !release rate [Bq/sec]
+100 !mesh number for the streamwise direction
+100 !mesh number for the sapnawise direction
+68 !Mesh number for the vertical direction
+1 !1:dose calculation by SIBYL
+1 !1:with building 0:without building
+1 !1:calculate gas dispersion 0:calculate only flow
+0 !1:calculate dry deposition 0: no deposition
+0 !1:with random number 0:without random number
+50,20,1 !plume release position
+0 !1:restart 0:initial start
+1 !start time step
+6001 !start time step for calculating statistics
+1 !start time step for calculating gas dispersion
+12000 !end time step
+60. !averaging time [second]
+0.02 !time step interval
+4. !grid resolution for streamwise and spanwise directions
+0.3 !friction velocity
+0.1 !roughness length
+180. !mean wind direction (0:North,90:East,180:South,270:West wind)
+0.001 !dry deposition velocity [m/s]

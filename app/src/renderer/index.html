@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>
+  GUI for LHADDAS Ver. __APP_VERSION__ (__BUILD_DATE__)
+  </title>
+  <link rel="stylesheet" href="./public/cesium/Widgets/widgets.css" />
+
+  <style>
+    .cesium-credit-logoContainer {
+      display: none !important;
+      /*
+        Cesium ionロゴを削除する方法：https://community.cesium.com/t/cesium-ion-logo-removal/8979/2
+        Cesium ionの機能が不使用ならロゴを削除してよい：https://community.cesium.com/t/remove-cesiumion-logo/25502/2
+      */
+    }
+
+    .cesium-widget-errorPanel {
+      z-index: 0;
+      /*
+        デフォルトだとエラーは`z-index: 99999`なので、`(?)`アイコンのツールチップ (`z-index: 1500`) よりも上に表示されてしまう。
+      */
+    }
+
+    .cesium-viewer-bottom {
+      right: unset !important;
+      /* 出典部分の幅を最小にして、マウスホバー時のラベル表示を阻害しないようにする */
+    }
+  </style>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+
+</html>

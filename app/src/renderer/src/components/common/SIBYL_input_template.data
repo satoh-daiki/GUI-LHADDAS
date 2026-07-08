@@ -1,0 +1,26 @@
+! ================================
+! SIBYL input file created by GUI 
+! --------------------------------
+! < Date > 2025-10-01
+! < Time > 09:48:22
+! ================================
+!
+! ##### MANDATORY PARAMETERs #####
+file         = 'RESP_H_Cs-137.bin'
+irs          =         4  ! mesh resolution (m)
+ns_x_sta     =         1  ! start point on x axis for SOURCE REGION
+ns_x_end     =       100  ! end   point on x axis
+ns_y_sta     =         1  ! start point on y axis
+ns_y_end     =       100  ! end   point on y axis
+ns_z_sta     =         0  ! start point on z axis
+ns_z_end     =        68  ! end   point on z axis
+!
+! ##### OPTIONAL PARAMETERs #####
+nt_x_sta     =         1  ! start point on x axis for TARGET REGION
+nt_x_end     =       100  ! end   point on x axis
+nt_y_sta     =         1  ! start point on y axis
+nt_y_end     =       100  ! end   point on y axis
+nsh_max      =        68  ! maximum mesh number of SHIELD alogn z axis
+imode        =         3  ! Calculation mode: 0= Total, 1= Ground, 2= Plume, 3= Total w GUI
+irestart     =         0  ! restart flag:  0= initial, 1= restart
+irestart_out =         0  ! output for restart: 0= no, 1= yes
