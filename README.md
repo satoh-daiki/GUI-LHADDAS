@@ -1,5 +1,7 @@
 # GUI-LHADDAS
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21273704.svg)](https://doi.org/10.5281/zenodo.21273704)
+
 GUI-LHADDAS is a Graphical User Interface (GUI) application for **LHADDAS**, a system that integrates the high-resolution atmospheric dispersion calculation code "**LOHDIM-LES**" and the dose evaluation code "**SIBYL**".
 
 This application allows you to seamlessly configure complex input parameters and execute calculations without relying on the command line. It also provides intuitive 3D map visualization and analysis of the simulation results (Atmospheric Concentration, Surface Deposition Concentration, Dose Rate, etc.).
@@ -111,6 +113,12 @@ npm run build:mac
 # Build for Linux (Output: .AppImage)
 npm run build:linux
 ```
+
+## Citation
+
+If you use GUI-LHADDAS in your work, please cite:
+
+> Satoh, D., Nakayama, H., & Kadowaki, M. (2026). GUI-LHADDAS (v1.1.0). Zenodo. [https://doi.org/10.5281/zenodo.21273705](https://doi.org/10.5281/zenodo.21273705)
 
 ## References
 
