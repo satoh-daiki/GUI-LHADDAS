@@ -1,0 +1,52 @@
+{
+  "title": "GUI-LHADDAS",
+  "description": "<p>GUI-LHADDAS is a cross-platform desktop application providing a graphical user interface for LHADDAS, a system that integrates the local-scale high-resolution atmospheric dispersion model LOHDIM-LES and the dose evaluation code SIBYL. It integrates input preparation, simulation execution, and interactive 3D geospatial visualization (via CesiumJS) of atmospheric dispersion and gamma-ray dose-rate results in a single workflow.</p>",
+  "creators": [
+    {
+      "name": "Satoh, Daiki",
+      "affiliation": "Japan Atomic Energy Agency",
+      "orcid": "0000-0001-6639-8208"
+    },
+    {
+      "name": "Nakayama, Hiromasa",
+      "affiliation": "Japan Atomic Energy Agency"
+    },
+    {
+      "name": "Kadowaki, Masanao",
+      "affiliation": "Japan Atomic Energy Agency"
+    }
+  ],
+  "license": "MIT",
+  "upload_type": "software",
+  "access_right": "open",
+  "keywords": [
+    "gis",
+    "emergency-response",
+    "3d-visualization",
+    "atmospheric-dispersion",
+    "lhaddas",
+    "radiation-dose-assessment"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.1080/00223131.2022.2038302",
+      "relation": "isDocumentedBy",
+      "resource_type": "publication-article"
+    },
+    {
+      "identifier": "10.1080/00223131.2021.1894256",
+      "relation": "isDocumentedBy",
+      "resource_type": "publication-article"
+    },
+    {
+      "identifier": "10.1371/journal.pone.0245932",
+      "relation": "isDocumentedBy",
+      "resource_type": "publication-article"
+    },
+    {
+      "identifier": "10.5281/zenodo.20413118",
+      "relation": "requires",
+      "resource_type": "software"
+    }
+  ]
+}
