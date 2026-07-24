@@ -116,9 +116,13 @@ npm run build:linux
 
 ## Citation
 
-If you use GUI-LHADDAS in your work, please cite:
+If you use GUI-LHADDAS in your work, please cite the software and/or the paper describing it:
 
+**Software:**
 > Satoh, D., Nakayama, H., & Kadowaki, M. (2026). GUI-LHADDAS (v1.1.0). Zenodo. [https://doi.org/10.5281/zenodo.21273705](https://doi.org/10.5281/zenodo.21273705)
+
+**Paper:**
+> Satoh, D., Nakayama, H., & Kadowaki, M. (2026). GUI-LHADDAS: A Graphical User Interface for the Local-scale High-resolution Atmospheric Dispersion and Dose Assessment System. Jxiv. [https://doi.org/10.51094/jxiv.5542](https://doi.org/10.51094/jxiv.5542)
 
 ## References
 
