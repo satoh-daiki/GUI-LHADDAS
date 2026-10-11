@@ -60,7 +60,9 @@ GUI-LHADDAS orchestrates LOHDIM-LES and SIBYL but does not bundle them, since th
 * [`LOHDIM-LES/README.md`](./LOHDIM-LES/README.md)
 * [`SIBYL/README.md`](./SIBYL/README.md)
 
-Sample input/output data sets to try the workflow without running your own calculations are distributed via [GitHub Releases](https://github.com/satoh-daiki/GUI-LHADDAS/releases); see [`examples/README.md`](./examples/README.md) for download and setup instructions.
+**Compatible versions.** GUI-LHADDAS v1.1.0 works with the serial build of LOHDIM-LES and with SIBYL v2.5.1 ([https://doi.org/10.5281/zenodo.21271574](https://doi.org/10.5281/zenodo.21271574)). LOHDIM-LES has no version number; use the serial build currently distributed through PRODAS. Executables of both codes are available for Windows, macOS, and Linux. Support for the parallel (OpenMP/MPI) build of LOHDIM-LES is planned for the next update of GUI-LHADDAS.
+
+Sample input/output data sets to try the workflow without running your own calculations are distributed via [GitHub Releases](https://github.com/satoh-daiki/GUI-LHADDAS/releases); see [`examples/README.md`](./examples/README.md) for download and setup instructions. Each data set contains the input files, the intermediate files passed from LOHDIM-LES to SIBYL, and the output files of both codes, so all visualization functions of GUI-LHADDAS can be tried without the LOHDIM-LES and SIBYL executables.
 
 ## Repository Structure
 
@@ -71,6 +73,22 @@ Sample input/output data sets to try the workflow without running your own calcu
 | `SIBYL/` | Placeholder for the separately obtained SIBYL executable |
 | `examples/` | Sample input/output data sets |
 | `docs/` | User manual and related documentation |
+
+## Source Code Overview
+
+GUI-LHADDAS is a front end to LOHDIM-LES and SIBYL. It writes their parameter input files from the values entered in the GUI, runs them as external executables, and reads their output files for display. It does not modify the computed fields: the data passed from LOHDIM-LES to SIBYL (air concentration, deposition, and building and terrain geometry) are written by LOHDIM-LES itself.
+
+The main source files for each function are listed below (paths relative to `app/src`). The renderer process (`renderer/`) contains the user interface, and the main process (`main/`) handles file access and the execution of the external codes. The file formats are described in the user manual.
+
+| Function | Source files |
+| --- | --- |
+| Input-file generation | `renderer/src/components/common/formatLohdimLesData.ts`, `formatSibylData.ts`, `convertToOriginalFormat.ts`, `convertToOriginalFormatSIBYL.ts`; file writing in `main/index.ts` |
+| Loading existing input files into the input tabs | `renderer/src/components/common/lohdimMapper.ts`, `sibylMapper.ts`, `convertToLohdimFormat.ts`, `parseIniFormat.ts`; `main/Tasks.impl/getInput.ts` |
+| Input validation | `renderer/src/utils/validation/lohdimLesSchema.ts`, `sibylSchema.ts`, `validation.ts` |
+| Execution of LOHDIM-LES and SIBYL | `main/Tasks.impl/runCalculation.ts` |
+| Output parsing | `main/Tasks.impl/getOutputLohdimLes3D.ts`, `getOutputLohdimLes2D.ts`, `getOutputSibyl2D.ts`, `getOutputPaths.ts` |
+| Geographic registration (release point and map alignment) | `renderer/src/components/Map設定/Map設定.tsx`, `renderer/src/utils/cesium/offsetRectangle.ts`, `renderer/src/hooks/atoms/deriv計算領域.ts`, `deriv放出点3D.ts` |
+| Visualization (3D voxels, 2D maps, color scale, slicing, tooltips) | `renderer/src/components/Map/Entity3D.tsx`, `Entity2D.tsx`, `Colorbar.tsx`, `colormaps.ts`, `Label.tsx`; `renderer/src/components/Tab可視化/Slice.tsx` |
 
 ## Development and Build Instructions
 
