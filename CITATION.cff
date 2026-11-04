@@ -1,0 +1,42 @@
+cff-version: 1.2.0
+message: "If you use GUI-LHADDAS in your work, please cite the paper below and, if possible, the software version you used."
+title: "GUI-LHADDAS"
+version: "1.1.0"
+doi: "10.5281/zenodo.21273705"
+date-released: "2026-07-09"
+license: MIT
+repository-code: "https://github.com/satoh-daiki/GUI-LHADDAS"
+type: software
+authors:
+  - family-names: "Satoh"
+    given-names: "Daiki"
+    affiliation: "Japan Atomic Energy Agency"
+    orcid: "https://orcid.org/0000-0001-6639-8208"
+  - family-names: "Nakayama"
+    given-names: "Hiromasa"
+    affiliation: "Japan Atomic Energy Agency"
+  - family-names: "Kadowaki"
+    given-names: "Masanao"
+    affiliation: "Japan Atomic Energy Agency"
+keywords:
+  - atmospheric dispersion
+  - radiation dose assessment
+  - emergency response
+  - 3D visualization
+  - LHADDAS
+preferred-citation:
+  type: article
+  title: "GUI-LHADDAS: A graphical user interface for the local-scale high-resolution atmospheric dispersion and dose assessment system"
+  authors:
+    - family-names: "Satoh"
+      given-names: "Daiki"
+      orcid: "https://orcid.org/0000-0001-6639-8208"
+    - family-names: "Nakayama"
+      given-names: "Hiromasa"
+    - family-names: "Kadowaki"
+      given-names: "Masanao"
+  journal: "SoftwareX"
+  volume: 36
+  start: 103178
+  year: 2026
+  doi: "10.1016/j.softx.2026.103178"
